@@ -1,0 +1,28 @@
+{
+  "name": "privacypolicy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx mocha",
+    "watch-ts": "npx tsc -w",
+    "build": "npx tsc && npx browserify import.js > dist/ppolicy.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dottgonzo/privacypolicy.git"
+  },
+  "author": "Dario Caruso",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/dottgonzo/privacypolicy/issues"
+  },
+  "homepage": "https://github.com/dottgonzo/privacypolicy#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/mocha": "^2.2.46",
+    "browserify": "^15.1.0",
+    "mocha": "^4.1.0",
+    "typescript": "^2.6.2"
+  }
+}
