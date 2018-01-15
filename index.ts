@@ -89,7 +89,10 @@ export class PrivacyPolicy {
     switch (opts.vPosition) {
       case 'bottom':
         domEl.style.bottom = '0px'
-    }
+        domEl.style.borderTop= '1px solid black'
+
+      }
+
 
 
     const text1 = document.createTextNode("Su questo sito utilizziamo cookie tecnici e, previo tuo consenso, cookie di profilazione.")
@@ -120,7 +123,7 @@ export class PrivacyPolicy {
     }
 
   }
-  show(nodeId: string, owner:IOwner) {
+  show(nodeId: string, owner:IOwner) { // TODO: all
 
     const domEl = document.createElement("div")
 

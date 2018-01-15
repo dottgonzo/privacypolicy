@@ -41,6 +41,7 @@ var PrivacyPolicy = (function () {
         switch (opts.vPosition) {
             case 'bottom':
                 domEl.style.bottom = '0px';
+                domEl.style.borderTop = '1px solid black';
         }
         var text1 = document.createTextNode("Su questo sito utilizziamo cookie tecnici e, previo tuo consenso, cookie di profilazione.");
         var text2 = document.createTextNode("Se vuoi saperne di più ");
