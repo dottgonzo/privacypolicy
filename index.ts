@@ -78,12 +78,13 @@ export class PrivacyPolicy {
 
 
 
-    domEl.style.position = 'absolute'
+    domEl.style.position = 'fixed'
     domEl.style.width = '100%'
     domEl.style.display = 'block'
     domEl.style.zIndex = '100000'
     domEl.style.backgroundColor = opts.backgroundColor
     domEl.style.color = opts.textColor
+    domEl.style.padding = '10px'
 
 
     switch (opts.vPosition) {

@@ -39,12 +39,13 @@ var PrivacyPolicy = (function () {
         domElPolicyAccept.appendChild(document.createTextNode("ACCETTA"));
         var domEl = document.createElement("div");
         domEl.id = opts.domName;
-        domEl.style.position = 'absolute';
+        domEl.style.position = 'fixed';
         domEl.style.width = '100%';
         domEl.style.display = 'block';
         domEl.style.zIndex = '100000';
         domEl.style.backgroundColor = opts.backgroundColor;
         domEl.style.color = opts.textColor;
+        domEl.style.padding = '10px';
         switch (opts.vPosition) {
             case 'bottom':
                 domEl.style.bottom = '0px';
