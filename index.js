@@ -44,13 +44,20 @@ var PrivacyPolicy = (function () {
                 domEl.style.bottom = '0px';
                 domEl.style.borderTop = '1px solid black';
         }
-        var text1 = document.createTextNode("Su questo sito utilizziamo cookie tecnici e, previo tuo consenso, cookie di profilazione.");
-        var text2 = document.createTextNode("Se vuoi saperne di più ");
-        var text3 = document.createTextNode("Cliccando in un punto qualsiasi dello schermo, effettuando un’azione di scroll, presti il consenso all’uso di tutti i cookie. ");
+        var text1 = document.createTextNode("Su questo sito utilizziamo cookie tecnici e, previo tuo consenso, cookie di profilazione.\u00A0");
+        var text2 = document.createTextNode("Se vuoi saperne di più\u00A0");
         domEl.appendChild(text1);
         domEl.appendChild(text2);
         domEl.appendChild(domElPolicyLink);
-        domEl.appendChild(text3);
+        var text3;
+        if (opts.acceptOnScroll) {
+            text3 = document.createTextNode("\u00A0Cliccando in un punto qualsiasi dello schermo, effettuando un’azione di scroll, presti il consenso all’uso di tutti i cookie.\u00A0");
+            domEl.appendChild(text3);
+        }
+        else {
+            text3 = document.createTextNode("\u00A0Per prestare il consenso all’uso di tutti i cookie clicca quì \u00A0");
+            domEl.appendChild(text3);
+        }
         domEl.appendChild(domElPolicyAccept);
         if (opts.domAttachId) {
             document.getElementById(opts.domAttachId).appendChild(domEl);
